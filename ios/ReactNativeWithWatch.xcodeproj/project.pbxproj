@@ -21,6 +21,14 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		47378D781D6C18CA00058203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47378D771D6C18CA00058203 /* AppDelegate.swift */; };
+		47B2C98A1D6C1E4500D57549 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47B2C9881D6C1E4500D57549 /* Interface.storyboard */; };
+		47B2C98C1D6C1E4500D57549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B2C98B1D6C1E4500D57549 /* Assets.xcassets */; };
+		47B2C9931D6C1E4500D57549 /* WatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 47B2C9921D6C1E4500D57549 /* WatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		47B2C99A1D6C1E4500D57549 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B2C9991D6C1E4500D57549 /* InterfaceController.swift */; };
+		47B2C99C1D6C1E4500D57549 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B2C99B1D6C1E4500D57549 /* ExtensionDelegate.swift */; };
+		47B2C99E1D6C1E4500D57549 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B2C99D1D6C1E4500D57549 /* NotificationController.swift */; };
+		47B2C9A01D6C1E4500D57549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B2C99F1D6C1E4500D57549 /* Assets.xcassets */; };
+		47B2C9A41D6C1E4500D57549 /* WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 47B2C9861D6C1E4500D57549 /* WatchApp.app */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +96,20 @@
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
 		};
+		47B2C9941D6C1E4500D57549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47B2C9911D6C1E4500D57549;
+			remoteInfo = "WatchApp Extension";
+		};
+		47B2C9A21D6C1E4500D57549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47B2C9851D6C1E4500D57549;
+			remoteInfo = WatchApp;
+		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
@@ -103,6 +125,31 @@
 			remoteInfo = RCTText;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		47B2C9B41D6C1E4500D57549 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				47B2C9931D6C1E4500D57549 /* WatchApp Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B2C9B61D6C1E4500D57549 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				47B2C9A41D6C1E4500D57549 /* WatchApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
@@ -123,6 +170,17 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		47378D761D6C18CA00058203 /* ReactNativeWithWatch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeWithWatch-Bridging-Header.h"; sourceTree = "<group>"; };
 		47378D771D6C18CA00058203 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ReactNativeWithWatch/AppDelegate.swift; sourceTree = "<group>"; };
+		47B2C9861D6C1E4500D57549 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B2C9891D6C1E4500D57549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		47B2C98B1D6C1E4500D57549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47B2C98D1D6C1E4500D57549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47B2C9921D6C1E4500D57549 /* WatchApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B2C9981D6C1E4500D57549 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		47B2C9991D6C1E4500D57549 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		47B2C99B1D6C1E4500D57549 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		47B2C99D1D6C1E4500D57549 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		47B2C99F1D6C1E4500D57549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47B2C9A11D6C1E4500D57549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +208,13 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B2C98F1D6C1E4500D57549 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +315,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		47B2C9871D6C1E4500D57549 /* WatchApp */ = {
+			isa = PBXGroup;
+			children = (
+				47B2C9881D6C1E4500D57549 /* Interface.storyboard */,
+				47B2C98B1D6C1E4500D57549 /* Assets.xcassets */,
+				47B2C98D1D6C1E4500D57549 /* Info.plist */,
+			);
+			path = WatchApp;
+			sourceTree = "<group>";
+		};
+		47B2C9961D6C1E4500D57549 /* WatchApp Extension */ = {
+			isa = PBXGroup;
+			children = (
+				47B2C9991D6C1E4500D57549 /* InterfaceController.swift */,
+				47B2C99B1D6C1E4500D57549 /* ExtensionDelegate.swift */,
+				47B2C99D1D6C1E4500D57549 /* NotificationController.swift */,
+				47B2C99F1D6C1E4500D57549 /* Assets.xcassets */,
+				47B2C9A11D6C1E4500D57549 /* Info.plist */,
+				47B2C9971D6C1E4500D57549 /* Supporting Files */,
+			);
+			path = "WatchApp Extension";
+			sourceTree = "<group>";
+		};
+		47B2C9971D6C1E4500D57549 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47B2C9981D6C1E4500D57549 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +385,8 @@
 				13B07FAE1A68108700A75B9A /* ReactNativeWithWatch */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ReactNativeWithWatchTests */,
+				47B2C9871D6C1E4500D57549 /* WatchApp */,
+				47B2C9961D6C1E4500D57549 /* WatchApp Extension */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 			);
 			indentWidth = 2;
@@ -300,6 +398,8 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* ReactNativeWithWatch.app */,
 				00E356EE1AD99517003FC87E /* ReactNativeWithWatchTests.xctest */,
+				47B2C9861D6C1E4500D57549 /* WatchApp.app */,
+				47B2C9921D6C1E4500D57549 /* WatchApp Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -333,15 +433,51 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				47B2C9B61D6C1E4500D57549 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				47B2C9A31D6C1E4500D57549 /* PBXTargetDependency */,
 			);
 			name = ReactNativeWithWatch;
 			productName = "Hello World";
 			productReference = 13B07F961A680F5B00A75B9A /* ReactNativeWithWatch.app */;
 			productType = "com.apple.product-type.application";
+		};
+		47B2C9851D6C1E4500D57549 /* WatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47B2C9B51D6C1E4500D57549 /* Build configuration list for PBXNativeTarget "WatchApp" */;
+			buildPhases = (
+				47B2C9841D6C1E4500D57549 /* Resources */,
+				47B2C9B41D6C1E4500D57549 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47B2C9951D6C1E4500D57549 /* PBXTargetDependency */,
+			);
+			name = WatchApp;
+			productName = WatchApp;
+			productReference = 47B2C9861D6C1E4500D57549 /* WatchApp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		47B2C9911D6C1E4500D57549 /* WatchApp Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47B2C9B31D6C1E4500D57549 /* Build configuration list for PBXNativeTarget "WatchApp Extension" */;
+			buildPhases = (
+				47B2C98E1D6C1E4500D57549 /* Sources */,
+				47B2C98F1D6C1E4500D57549 /* Frameworks */,
+				47B2C9901D6C1E4500D57549 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchApp Extension";
+			productName = "WatchApp Extension";
+			productReference = 47B2C9921D6C1E4500D57549 /* WatchApp Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -356,6 +492,12 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					47B2C9851D6C1E4500D57549 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					47B2C9911D6C1E4500D57549 = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
@@ -416,6 +558,8 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* ReactNativeWithWatch */,
 				00E356ED1AD99517003FC87E /* ReactNativeWithWatchTests */,
+				47B2C9851D6C1E4500D57549 /* WatchApp */,
+				47B2C9911D6C1E4500D57549 /* WatchApp Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -510,6 +654,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		47B2C9841D6C1E4500D57549 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B2C98C1D6C1E4500D57549 /* Assets.xcassets in Resources */,
+				47B2C98A1D6C1E4500D57549 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B2C9901D6C1E4500D57549 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B2C9A01D6C1E4500D57549 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -546,6 +707,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		47B2C98E1D6C1E4500D57549 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B2C99E1D6C1E4500D57549 /* NotificationController.swift in Sources */,
+				47B2C99C1D6C1E4500D57549 /* ExtensionDelegate.swift in Sources */,
+				47B2C99A1D6C1E4500D57549 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -553,6 +724,16 @@
 			isa = PBXTargetDependency;
 			target = 13B07F861A680F5B00A75B9A /* ReactNativeWithWatch */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		47B2C9951D6C1E4500D57549 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47B2C9911D6C1E4500D57549 /* WatchApp Extension */;
+			targetProxy = 47B2C9941D6C1E4500D57549 /* PBXContainerItemProxy */;
+		};
+		47B2C9A31D6C1E4500D57549 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47B2C9851D6C1E4500D57549 /* WatchApp */;
+			targetProxy = 47B2C9A21D6C1E4500D57549 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -564,6 +745,14 @@
 			);
 			name = LaunchScreen.xib;
 			path = ReactNativeWithWatch;
+			sourceTree = "<group>";
+		};
+		47B2C9881D6C1E4500D57549 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47B2C9891D6C1E4500D57549 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -641,6 +830,84 @@
 				);
 				PRODUCT_NAME = ReactNativeWithWatch;
 				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeWithWatch-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		47B2C9A51D6C1E4500D57549 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = WatchApp_Extension;
+				INFOPLIST_FILE = WatchApp/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.ReactNativeWithWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		47B2C9A61D6C1E4500D57549 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = WatchApp_Extension;
+				INFOPLIST_FILE = WatchApp/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.ReactNativeWithWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		47B2C9A71D6C1E4500D57549 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "WatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.ReactNativeWithWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		47B2C9A81D6C1E4500D57549 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "WatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.ReactNativeWithWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
 		};
@@ -747,6 +1014,24 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47B2C9B31D6C1E4500D57549 /* Build configuration list for PBXNativeTarget "WatchApp Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47B2C9A71D6C1E4500D57549 /* Debug */,
+				47B2C9A81D6C1E4500D57549 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47B2C9B51D6C1E4500D57549 /* Build configuration list for PBXNativeTarget "WatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47B2C9A51D6C1E4500D57549 /* Debug */,
+				47B2C9A61D6C1E4500D57549 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
