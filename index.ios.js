@@ -9,7 +9,9 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableHighlight,
+  NativeModules,
 } from 'react-native';
 
 class ReactNativeWithWatch extends Component {
@@ -17,16 +19,18 @@ class ReactNativeWithWatch extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          React Native + Apple Watch!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+        <TouchableHighlight style={styles.button}
+          onPress={() => {
+            const randomNumber = Math.round((Math.random() * 100) + 1);
+            NativeModules.Watch.sendMessage("React Native", randomNumber.toString());
+          }}>
+          <Text style={styles.instructions}>
+            Generate random number!
+          </Text>
+        </TouchableHighlight>
+    </View>
     );
   }
 }
@@ -47,6 +51,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+  button: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FE7D60',
+    width: 200,
+    height: 50,
+    borderRadius: 4,
   },
 });
 

@@ -5,7 +5,7 @@
 
 import WatchKit
 import Foundation
-
+import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
 
@@ -24,9 +24,30 @@ class InterfaceController: WKInterfaceController {
     }
   }
   
+  var session: WCSession? {
+    didSet {
+      if let session = session {
+        session.delegate = self
+        session.activateSession();
+      }
+    }
+  }
+  
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
-    titleText = "Morning!"
-    bodyText = "How's it going?"
+    if (WCSession.isSupported()) {
+      session = WCSession.defaultSession()
+    }
   }
+}
+
+extension InterfaceController: WCSessionDelegate {
+  
+  func session(session: WCSession, didReceiveMessage message: [String: AnyObject]) {
+    if let title = message["title"] as? String, let body = message["body"] as? String {
+      self.titleText = title
+      self.bodyText = body
+    }
+  }
+  
 }

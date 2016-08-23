@@ -4,11 +4,21 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
+  
+  var session: WCSession? {
+    didSet {
+      if let session = session {
+        session.delegate = self
+        session.activateSession()
+      }
+    }
+  }
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
     
@@ -28,6 +38,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.window!.rootViewController = rootViewController
     self.window!.makeKeyAndVisible()
     
+    if WCSession.isSupported() {
+      session = WCSession.defaultSession()
+    }
+    
     return true
   }
+}
+
+extension AppDelegate: WCSessionDelegate {
+
 }

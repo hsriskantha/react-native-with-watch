@@ -21,12 +21,14 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		47378D781D6C18CA00058203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47378D771D6C18CA00058203 /* AppDelegate.swift */; };
+		47A4E0031D6CD36E00617F58 /* WatchReactBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A4E0021D6CD36E00617F58 /* WatchReactBridge.m */; };
 		47B2C98A1D6C1E4500D57549 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47B2C9881D6C1E4500D57549 /* Interface.storyboard */; };
 		47B2C98C1D6C1E4500D57549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B2C98B1D6C1E4500D57549 /* Assets.xcassets */; };
 		47B2C9931D6C1E4500D57549 /* WatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 47B2C9921D6C1E4500D57549 /* WatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		47B2C99A1D6C1E4500D57549 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B2C9991D6C1E4500D57549 /* InterfaceController.swift */; };
 		47B2C9A01D6C1E4500D57549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B2C99F1D6C1E4500D57549 /* Assets.xcassets */; };
 		47B2C9A41D6C1E4500D57549 /* WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 47B2C9861D6C1E4500D57549 /* WatchApp.app */; };
+		47ED16F01D6C246900EFF19B /* Watch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ED16EF1D6C246900EFF19B /* Watch.swift */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -168,6 +170,7 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		47378D761D6C18CA00058203 /* ReactNativeWithWatch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeWithWatch-Bridging-Header.h"; sourceTree = "<group>"; };
 		47378D771D6C18CA00058203 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ReactNativeWithWatch/AppDelegate.swift; sourceTree = "<group>"; };
+		47A4E0021D6CD36E00617F58 /* WatchReactBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WatchReactBridge.m; path = ReactNativeWithWatch/WatchReactBridge.m; sourceTree = "<group>"; };
 		47B2C9861D6C1E4500D57549 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B2C9891D6C1E4500D57549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		47B2C98B1D6C1E4500D57549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +180,7 @@
 		47B2C9991D6C1E4500D57549 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		47B2C99F1D6C1E4500D57549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47B2C9A11D6C1E4500D57549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47ED16EF1D6C246900EFF19B /* Watch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Watch.swift; path = ReactNativeWithWatch/Watch.swift; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -299,6 +303,8 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				47378D771D6C18CA00058203 /* AppDelegate.swift */,
 				47378D761D6C18CA00058203 /* ReactNativeWithWatch-Bridging-Header.h */,
+				47ED16EF1D6C246900EFF19B /* Watch.swift */,
+				47A4E0021D6CD36E00617F58 /* WatchReactBridge.m */,
 			);
 			name = ReactNativeWithWatch;
 			sourceTree = "<group>";
@@ -697,7 +703,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47A4E0031D6CD36E00617F58 /* WatchReactBridge.m in Sources */,
 				47378D781D6C18CA00058203 /* AppDelegate.swift in Sources */,
+				47ED16F01D6C246900EFF19B /* Watch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
