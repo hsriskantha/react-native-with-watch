@@ -25,8 +25,6 @@
 		47B2C98C1D6C1E4500D57549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B2C98B1D6C1E4500D57549 /* Assets.xcassets */; };
 		47B2C9931D6C1E4500D57549 /* WatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 47B2C9921D6C1E4500D57549 /* WatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		47B2C99A1D6C1E4500D57549 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B2C9991D6C1E4500D57549 /* InterfaceController.swift */; };
-		47B2C99C1D6C1E4500D57549 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B2C99B1D6C1E4500D57549 /* ExtensionDelegate.swift */; };
-		47B2C99E1D6C1E4500D57549 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B2C99D1D6C1E4500D57549 /* NotificationController.swift */; };
 		47B2C9A01D6C1E4500D57549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B2C99F1D6C1E4500D57549 /* Assets.xcassets */; };
 		47B2C9A41D6C1E4500D57549 /* WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 47B2C9861D6C1E4500D57549 /* WatchApp.app */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -177,8 +175,6 @@
 		47B2C9921D6C1E4500D57549 /* WatchApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B2C9981D6C1E4500D57549 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		47B2C9991D6C1E4500D57549 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		47B2C99B1D6C1E4500D57549 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		47B2C99D1D6C1E4500D57549 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		47B2C99F1D6C1E4500D57549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47B2C9A11D6C1E4500D57549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -329,8 +325,6 @@
 			isa = PBXGroup;
 			children = (
 				47B2C9991D6C1E4500D57549 /* InterfaceController.swift */,
-				47B2C99B1D6C1E4500D57549 /* ExtensionDelegate.swift */,
-				47B2C99D1D6C1E4500D57549 /* NotificationController.swift */,
 				47B2C99F1D6C1E4500D57549 /* Assets.xcassets */,
 				47B2C9A11D6C1E4500D57549 /* Info.plist */,
 				47B2C9971D6C1E4500D57549 /* Supporting Files */,
@@ -711,8 +705,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47B2C99E1D6C1E4500D57549 /* NotificationController.swift in Sources */,
-				47B2C99C1D6C1E4500D57549 /* ExtensionDelegate.swift in Sources */,
 				47B2C99A1D6C1E4500D57549 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

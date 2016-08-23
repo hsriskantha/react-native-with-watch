@@ -9,20 +9,24 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-        
-        // Configure interface objects here.
+  @IBOutlet var titleLabel: WKInterfaceLabel!
+  @IBOutlet var bodyLabel: WKInterfaceLabel!
+  
+  var titleText: String? {
+    didSet {
+      titleLabel.setText(titleText)
     }
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
+  }
+  
+  var bodyText: String? {
+    didSet {
+      bodyLabel.setText(bodyText)
     }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
+  }
+  
+  override func awakeWithContext(context: AnyObject?) {
+    super.awakeWithContext(context)
+    titleText = "Morning!"
+    bodyText = "How's it going?"
+  }
 }
