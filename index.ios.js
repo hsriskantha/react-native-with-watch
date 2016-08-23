@@ -12,9 +12,26 @@ import {
   View,
   TouchableHighlight,
   NativeModules,
+  NativeAppEventEmitter,
 } from 'react-native';
 
 class ReactNativeWithWatch extends Component {
+  constructor(props) {
+    super(props);
+    this.watchModule = NativeModules.Watch;
+  }
+
+  componentDidMount() {
+    var listener = NativeAppEventEmitter.addListener(
+      'get-data',
+      () => this.watchModule.sendMessage("React Native", "Connected!")
+    );
+  }
+
+  componentWillUnmount() {
+    listener.remove();
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -24,7 +41,7 @@ class ReactNativeWithWatch extends Component {
         <TouchableHighlight style={styles.button}
           onPress={() => {
             const randomNumber = Math.round((Math.random() * 100) + 1);
-            NativeModules.Watch.sendMessage("React Native", randomNumber.toString());
+            this.watchModule.sendMessage("React Native", randomNumber.toString());
           }}>
           <Text style={styles.instructions}>
             Generate random number!

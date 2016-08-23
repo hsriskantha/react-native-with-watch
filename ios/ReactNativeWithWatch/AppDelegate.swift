@@ -10,6 +10,7 @@ import WatchConnectivity
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
+  var bridge: RCTBridge?
   
   var session: WCSession? {
     didSet {
@@ -30,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                initialProperties: nil,
                                launchOptions: launchOptions)
     rootView.backgroundColor = UIColor.whiteColor()
+    bridge = rootView.bridge
     
     let rootViewController = UIViewController();
     rootViewController.view = rootView
@@ -51,8 +53,11 @@ extension AppDelegate: WCSessionDelegate {
   func session(session: WCSession, didReceiveMessage message: [String: AnyObject]) {
     if let action = message["action"] as? String {
       if (action == "get-data") {
-        let watch = Watch()
-        watch.sendMessage("iPhone says:", body:"Hello")
+        let oneSecDelay = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
+        dispatch_after(oneSecDelay, dispatch_get_main_queue()) {
+          let dispatcher = self.bridge?.eventDispatcher()
+          dispatcher?.sendAppEventWithName("get-data", body: nil)
+        }
       }
     }
   }
