@@ -12,10 +12,10 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="ECb-fN-rne">
                             <items>
-                                <label alignment="center" text="Title" id="B47-51-Jjp">
+                                <label alignment="center" text="Loading..." id="B47-51-Jjp">
                                     <color key="textColor" red="0.44705882349999998" green="0.76078431369999999" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </label>
-                                <label alignment="center" verticalAlignment="center" text="Body" id="7UR-eW-P9X"/>
+                                <label alignment="center" verticalAlignment="center" text="Please wait" id="7UR-eW-P9X"/>
                             </items>
                         </group>
                     </items>

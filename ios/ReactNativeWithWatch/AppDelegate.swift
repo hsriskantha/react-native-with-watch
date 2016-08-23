@@ -48,4 +48,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: WCSessionDelegate {
 
+  func session(session: WCSession, didReceiveMessage message: [String: AnyObject]) {
+    if let action = message["action"] as? String {
+      if (action == "get-data") {
+        let watch = Watch()
+        watch.sendMessage("iPhone says:", body:"Hello")
+      }
+    }
+  }
+  
 }

@@ -38,6 +38,9 @@ class InterfaceController: WKInterfaceController {
     if (WCSession.isSupported()) {
       session = WCSession.defaultSession()
     }
+    
+    // Get initial data from React Native
+    session?.sendMessage(["action":"get-data"], replyHandler: nil, errorHandler: nil)
   }
 }
 
